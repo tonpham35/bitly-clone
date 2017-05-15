@@ -1,0 +1,157 @@
+/** {
+	border: 1px solid rgba(0, 0, 0, 0.3);
+}*/
+
+body {
+	margin: 0px;
+}
+
+.background {
+  background-image: url("../img/camp_Fotor.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  width: 100%;
+}
+
+.header {
+	margin: 0px 0px;
+	padding: 0px;
+	position: relative;
+	top: 0px;
+	height: 56px;
+	position: fixed;
+	background-color: rgba(31,64,24,0.7);
+	width: 100%;
+	/*border-bottom: 2px solid rgba(0,0,0,0.3);*/
+}
+
+#title {
+	margin: 0px;
+	padding: 0px 15px;
+	font-size: 30px;
+	font-family: 'Pacifico', cursive;
+	color: whitesmoke;
+}
+
+.title {
+	display: block;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 4em;
+	color: whitesmoke;
+	position: relative;
+	top: 140px;
+	text-align: center;
+}
+
+.submit {
+	position: relative;
+	top: 170px;
+	margin-left: 25%;
+	font-size: 25px;
+}
+
+.input {
+	padding: 5px;
+	font-size: 18px;
+	font-family:'arial';
+	width: 60%;  
+	color: gray;  
+}
+
+#submit{
+    background-color: forestgreen;
+    border: none;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.footer
+{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+    right:0px;
+    height:50px;
+    margin:0;
+    background-color: forestgreen;
+    text-align: center;
+}
+
+#peek{
+    position:fixed;
+    bottom:0px;
+    left:0px;
+}
+
+#foot-banner {
+    font-family: 'Montserrat', sans-serif;
+    font-size: px;
+    color: whitesmoke;
+    bottom: 0px;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: scroll;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-size: 30px;
+	font-family: 'Pacifico', cursive;
+
+}
+
+li {
+    float: right;
+    border-right: 2px solid rgba(0,0,0,0.3);
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 0px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: rgb(31,64,24);
+}
+
+.table{
+	margin: auto;
+	padding-top: 150px;
+	margin-right: 10%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 80%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    font-size: 20px;
+
+}
+
+th {
+	background-color: forestgreen;
+}
+
+tr:nth-child(odd) {
+    background-color: #dddddd;
+}
+
