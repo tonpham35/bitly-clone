@@ -1,8 +1,9 @@
 class Url < ActiveRecord::Base
 	# This is Sinatra! Remember to create a migration!
-	validates_presence_of :long_url
-    validates_format_of :long_url, :with => /https:\/\//,
+	 validates_presence_of :long_url
+    validates_format_of :long_url, :with => URI::regexp(['http', 'https']),
     :message => "Only letters allowed"
+      
 
   def shorten
     # Write a method here
