@@ -2,31 +2,16 @@
 	border: 1px solid rgba(0, 0, 0, 0.3);
 }*/
 
-/*body {
+body {
 	margin: 0px;
-}*/
+}
 
 .background {
-    background-image: url("../img/camp_Fotor.jpg");
-    background-size: cover;
-    background-position: center center;
-    height: 400px;
-    width: 100%;
-    position: fixed;
-    z-index: 8;
-}
-
-.body {
-    background-color: floralwhite;
-}
-
-.output {
-    margin-right: 10%;
-    margin-left: 10%;
-    /*padding-top: 450px;*/
-    padding-bottom: 100px;
-    position: relative;
-    top: 450px;
+  background-image: url("camp_fotor.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 400px;
+  width: 100%;
 }
 
 .header {
@@ -38,27 +23,7 @@
 	position: fixed;
 	background-color: rgba(31,64,24,0.7);
 	width: 100%;
-    z-index:10;
 	/*border-bottom: 2px solid rgba(0,0,0,0.3);*/
-}
-
-#off {
-    float: left;
-}
-
-
-#pop-up {
-    display: none;
-    position: relative;
-    top: 150px;
-    left: 15%;
-    background-color: lightgreen;
-    width: 20%;
-    border: 1px solid rgba(0, 0, 0, 0.3);
-    border-radius: 5px;
-    z-index: 13;
-    font-size: 25px;
-    /*padding-top: 2px;*/
 }
 
 #title {
@@ -72,10 +37,10 @@
 .title {
 	display: block;
 	font-family: 'Montserrat', sans-serif;
-	font-size: 50px;
+	font-size: 4em;
 	color: whitesmoke;
 	position: relative;
-	top: 120px;
+	top: 140px;
 	text-align: center;
 }
 
@@ -87,43 +52,17 @@
 }
 
 .input {
-    /*position: relative;*/
-    /*top: 100px;*/
 	padding: 5px;
 	font-size: 18px;
 	font-family:'arial';
-	width: 70%;  
+	width: 60%;  
 	color: gray;  
-}
-
-#input {
-    /*margin-top: 200px;*/
-    position: absolute;
-    top: 210px;
-    margin-left: 15%;
-    margin-right: 15%;
-    display: inline-block;
-    width: 100%;
-    padding-top: 40px;
 }
 
 #submit{
     background-color: forestgreen;
     border: none;
     color: white;
-    padding: 10px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 20px;
-    margin: 4px 2px;
-    cursor: pointer;
-}
-
-#submit:hover {
-    background-color: green;
-    border: none;
-    color: black;
     padding: 10px 32px;
     text-align: center;
     text-decoration: none;
@@ -143,11 +82,6 @@
     margin:0;
     background-color: forestgreen;
     text-align: center;
-}
-
-.success {
-    color:red;
-    background-color: blue;
 }
 
 #peek{
@@ -190,8 +124,7 @@ li a {
 }
 
 li a:hover {
-    background-color: rgba(31,80,30,0.4);
-    color: black;
+    background-color: rgb(31,64,24);
 }
 
 .table{
@@ -204,16 +137,13 @@ table {
     font-family: arial, sans-serif;
     border-collapse: collapse;
     width: 80%;
-    z-index: 1;
-/*    margin: auto;*/
 }
 
 td, th {
     border: 1px solid #dddddd;
-    text-align: center;
+    text-align: left;
     padding: 8px;
     font-size: 20px;
-    z-index: 1;
 
 }
 
@@ -223,6 +153,5 @@ th {
 
 tr:nth-child(odd) {
     background-color: #dddddd;
-    z-index: 1;
 }
 

@@ -3,7 +3,10 @@ class Url < ActiveRecord::Base
 	 validates_presence_of :long_url
     validates_format_of :long_url, :with => URI::regexp(['http', 'https']),
     :message => "Only letters allowed"
-      
+  
+  def counter
+    self.click_count += 1
+  end
 
   def shorten
     # Write a method here

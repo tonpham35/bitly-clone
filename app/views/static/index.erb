@@ -1,8 +1,8 @@
 <!-- <!DOCTYPE html> -->
 <html>
 	<head>
-		<title>Ton's bitly Clone</title>
-		<!-- <script type="text/javascript" src="index.js"></script> -->
+		<title>tonly - a bitly Clone</title>
+		
 		<link rel="stylesheet" type="text/css" href="css/bitly.css">
 		<link href="https://fonts.googleapis.com/css?family=Lato:900|Montserrat|Pacifico" rel="stylesheet">	
 		<meta charset="utf-8">
@@ -10,6 +10,8 @@
   		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/application.js"></script>
+
 	</head>
 	<body class="body">
 		<div class = "header">
@@ -26,15 +28,18 @@
 			<div class="title">
 				Insert a link to shorten it
 			</div>
+			    <!-- HIDDEN / POP-UP DIV -->
+		    <div id="pop-up">
+		      <p>
+			 	Congrats, You made a link! 
+		      </p>
+		    </div>
 		<!-- <div class = "container"> -->
    			<div id = "input">
-				<form action="/urls" method="post" style="display: inline;">
+				<form id = "input-box" action="/urls" method="post">
         			<input class="input" id="name" name="long_url" type="text" placeholder="https:// Paste-URL-Here" />  
    					<input id="submit" type="submit" value="Shorten">
    				</form>
-   				<form class = "input" action="/clear" method="post" style="display: inherit">
-    				<input id="submit" type="submit" value="Clear Links">
-				</form>
 			</div>
 			<% if flash %>
       			<% flash.each do |k,v| %>
@@ -46,17 +51,22 @@
 		<div class = "output">
 			<% if @urls != nil %> 
 				<table class = "table">
+					<thead>
 					<th>LONG URL</th>
 					<th>SHORT URL</th>
 					<th>Click Count</th>
-					<% @urls.each do |x| %>
+					</thead>
+					<tbody class = "tablebody">
+					<% @urls.order('created_at DESC').first(15).each do |x| %>
 						<tr>
 							<td><a href="<%= x.long_url %>"><%= x.long_url %></a></td>
 							<td><a href="<%= x.short_url %>" type="submit" value = "<%= x.short_url %>">https://ton.ly/<%= x.short_url %></a></td>
 							<td><%= x.click_count %></td>
 						</tr>
 					<% end %>
+					</tbody>
 				</table> 
+
  			<% end %>
  		</div>
 		<div class="footer">

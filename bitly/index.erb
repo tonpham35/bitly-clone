@@ -1,0 +1,26 @@
+<h1>Hello World</h1>
+
+<p>See Me in views/static/index.html.erb</p>
+
+<form action="/urls" method="post">
+    Enter URL: 
+    <input type="text" name="long_url">
+    <input type="submit" value="Submit">
+ </form>
+
+<% if @urls != nil %> 
+<table>
+<th>LONG URL</th>
+<th>SHORT URL</th>
+<% @urls.each do |x| %>
+<tr>
+<td><a href="<%= x.long_url %>"><%= x.long_url %></a></td>
+<td><a href="<%= x.short_url %>">http://ton.ly/<%= x.short_url %></a></td>
+</tr>
+<% end %>
+</table> 
+<% end %>
+
+<form action="/clear" method="post">
+    <input type="submit" value="Clear Links">
+ </form>

@@ -18,29 +18,25 @@ post '/urls' do
 
     	@url = Url.new(long_url: params[:long_url], short_url: short)
       if @url.save
-        flash[:success] =  "Congratulations. You created a link!"
-        redirect to '/'
-      else
-        flash[:danger] = "Bad Format: Link should start with https://"
-        redirect to '/'
+      Url.last(15).to_json(except: :id)
       end
-	else
-      flash[:danger] = "Link has already been shortened"
-      redirect to '/'
 	end
 end
 
 post '/clear' do
 	Url.destroy_all
-	redirect to '/'
+	# redirect to '/'
 end
 
 # i.e. /q6bda
 get '/:short_url' do
   # redirect to appropriate "long" URL
   u = Url.find_by(short_url: params[:short_url])
-  u.click_count += 1
+  u.counter
   u.save
-  redirect u.long_url
+  # Url.last.to_json(except: :id)
+  redirect to u.long_url
+  # Url.last(5).to_json(except: :id)
+  # u.click_count.to_json
   # erb :"static/index"
 end
